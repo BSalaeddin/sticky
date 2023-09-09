@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sticky - documentation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ekko-lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="../vendor/prism/css/prism.css">
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="../assets/img/logo.png" alt="Sticky">
+        <span>documentation</span>
+      </div>
+      <div class="list-group list-group-flush">
+        <h4 class="menu-title">General</h4>
+        <a href="../getstarted.html" class="list-group-item list-group-item-action bg-light ">Getting started</a>
+        <a href="configuration.html" class="list-group-item list-group-item-action bg-light "> Configuration</a>
+        <a href="usage.html" class="list-group-item list-group-item-action bg-light">Usage</a>
+        <h4 class="menu-title">Developement</h4>
+        <a href="frontend.html" class="list-group-item list-group-item-action bg-light">Frontend</a>
+        <a href="backend.html" class="list-group-item list-group-item-action bg-light">Backend</a>
+      </div>
+
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+      </nav>
+      <div class="container-fluid">
+          <h4 class="mt-5"># Frontend project structure</h4>
+         
+          <pre><code class="language-shell-session">
+              │   .editorconfig
+              │   .gitignore
+              │   angular.json
+              │   package-lock.json
+              │   package.json
+              │   README.md
+              │   tsconfig.json
+              │   tslint.json
+              │
+              └───src
+                  │   browserslist
+                  │   favicon.ico
+                  │   index.html
+                  │   karma.conf.js
+                  │   main.ts
+                  │   polyfills.ts
+                  │   styles.css
+                  │   test.ts
+                  │   tsconfig.app.json
+                  │   tsconfig.spec.json
+                  │   tslint.json
+                  │
+                  ├───app
+                  │   │   app-routing.module.ts
+                  │   │   app.component.html
+                  │   │   app.component.ts
+                  │   │   app.module.ts
+                  │   │   error.interceptor.ts
+                  │   │
+                  │   ├───Auth
+                  │   │       auth-data.model.ts
+                  │   │       auth-interceptor.ts
+                  │   │       auth.component.css
+                  │   │       auth.component.html
+                  │   │       auth.component.ts
+                  │   │       auth.guard.ts
+                  │   │       auth.service.ts
+                  │   │
+                  │   ├───error
+                  │   │       error.component.css
+                  │   │       error.component.html
+                  │   │       error.component.ts
+                  │   │
+                  │   ├───page-not-found
+                  │   │       page-not-found.component.css
+                  │   │       page-not-found.component.html
+                  │   │       page-not-found.component.spec.ts
+                  │   │       page-not-found.component.ts
+                  │   │
+                  │   └───work-space
+                  │       │   work-space.component.css
+                  │       │   work-space.component.html
+                  │       │   work-space.component.ts
+                  │       │
+                  │       ├───notes
+                  │       │   │   note.model.ts
+                  │       │   │   notes.component.css
+                  │       │   │   notes.component.html
+                  │       │   │   notes.component.ts
+                  │       │   │   notes.service.ts
+                  │       │   │
+                  │       │   └───note-item
+                  │       │           note-item.component.css
+                  │       │           note-item.component.html
+                  │       │           note-item.component.ts
+                  │       │
+                  │       └───side-nav
+                  │           │   project.model.ts
+                  │           │   projects.service.ts
+                  │           │   side-nav.component.css
+                  │           │   side-nav.component.html
+                  │           │   side-nav.component.ts
+                  │           │
+                  │           └───project-item
+                  │                   delete-project-confirmation.css
+                  │                   delete-project-confirmation.html
+                  │                   project-item.component.css
+                  │                   project-item.component.html
+                  │                   project-item.component.ts
+                  │
+                  ├───assets
+                  │   │   .gitkeep
+                  │   │
+                  │   └───img
+                  │           404-logo.png
+                  │           bg.jpg
+                  │           logo-icon.png
+                  │           logo-text.png
+                  │
+                  └───environments
+                          environment.prod.ts
+                          environment.ts
+              
+          </code></pre>
+          <h4 class="mt-5"># Angular components</h4>
+          <a href="../assets/img/components.png"  data-toggle="lightbox"><img  class="img-fluid" src="../assets/img/components.png" alt=""></a>
+      </div>   
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/prism/js/prism.js"></script>
+    <!-- ekko-lightbox JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+  
+
+  <!-- Menu Toggle Script -->
+  <script>
+    
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+   });
+  </script>
+
+</body>
+
+</html>

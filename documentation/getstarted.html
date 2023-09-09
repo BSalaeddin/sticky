@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sticky - documentation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/prism/css/prism.css">
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="assets/img/logo.png" alt="Sticky">
+        <span>documentation</span>
+      </div>
+      <div class="list-group list-group-flush">
+        <h4 class="menu-title">General</h4>
+        <a href="getstarted.html" class="list-group-item list-group-item-action bg-light ">Getting started</a>
+        <a href="pages/configuration.html" class="list-group-item list-group-item-action bg-light "> Configuration</a>
+        <a href="pages/usage.html" class="list-group-item list-group-item-action bg-light">Usage</a>
+        <h4 class="menu-title">Developement</h4>
+        <a href="pages/frontend.html" class="list-group-item list-group-item-action bg-light">Frontend</a>
+        <a href="pages/backend.html" class="list-group-item list-group-item-action bg-light">Backend</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+      </nav>
+      <div class="container-fluid">
+        <img class="content-logo" src="assets/img/logo-2.png" alt="sticky">
+        <h5 class="mt-2">About</h5>
+        <p>Sticky is a web application which lets you add notes for multiple purposes (Work tasks, Daily activities, Study projects ... ). Built with MEAN stack (MongoDB, ExpressJS, AngularJS, and Node.js).</p>
+
+        <h5 class="mt-5">Pre-requisites</h5>
+        <h6>node.js - <a href="https://nodejs.org">Download page</a></h6>
+        <h6>Angular CLI - <a href="https://cli.angular.io/">Download page</a></h6>
+        <h6>MongoDB - <a href="https://www.mongodb.com/download-center/community">Download page</a></h6>
+
+
+
+    
+        <h5 class="mt-5">Installation - Frontend</h5>
+        <p class="instruction">cd into frontend folder and run:</p>
+        <pre class=" code-toolbar"><code class="language-shell-session">npm install</code></pre>
+        <h6>Start the angular application</h6>
+        <p class="instruction">run:</p>
+        <pre  class=" code-toolbar"><code class="language-shell-session">ng serve</code></pre>
+        <h5 class="mt-5">Installation - Backend</h5>
+        <p class="instruction">cd into backend folder and run:</p>
+        <pre  class=" code-toolbar"><code class="language-shell-session ">npm install</code></pre>
+        <h6>Start the express server</h6>
+        <p class="instruction">run:</p>
+        <pre  class=" code-toolbar"><code class="language-shell-session ">npm run start:server</code></pre>
+<hr class="mb-5">
+      </div>
+    
+
+
+
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/prism/js/prism.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+
+</html>
