@@ -1,6 +1,6 @@
 # Sticky
 
-![Sticky Logo](./images/logo.png)
+![Sticky Logo](https://shuaa-sticky.netlify.app/assets/img/logo-text.png)
 
 Welcome to Sticky! This Angular application allows you to create, organize, and manage digital sticky notes. Say goodbye to traditional paper notes cluttering your workspace!
 
