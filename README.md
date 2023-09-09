@@ -27,7 +27,7 @@ Make sure you have Node.js and Angular CLI installed on your machine.
 
 ## Screenshots
 
-![Sticky App](./images/screenshot.png)
+![Sticky App](https://s3.envato.com/files/452419242/02_preview2.jpg)
 
 ## Contributing
 
