@@ -1,0 +1,70 @@
+<!-- BEGIN SIDE NAV COMPONENT -->
+<!-- BEGIN GLOBAL NAVIGATION -->
+<div class="global-nav">
+  <!-- BEGIN LOGO -->
+  <div class="logo">
+    <img src="assets/img/logo-icon.png" alt="sticky">
+  </div>
+  <!-- END LOGO -->
+  <!-- BEGIN NAV ACTIONS TOP -->
+  <ul class="nav-actions-top">
+    <li>
+      <div class="rounded-btn"
+           (click)="drawer.toggle();newProject = false;"
+           matTooltip="Toggle project list"
+           matTooltipPosition="right">
+        <i class="material-icons">list</i>
+      </div>
+    </li>
+    <li>
+      <div *ngIf="!newProject"
+            class="rounded-btn"
+            matTooltip="Add new project"
+            (click)="onDisplayNewProjectInput()"
+            matTooltipPosition="right">
+        <i class="material-icons">add</i>
+      </div>
+    </li>
+  </ul>
+  <!-- END NAV ACTIONS TOP -->
+  <!-- BEGIN NAV ACTIONS BOTTOM -->
+  <div class="nav-actions-bottom">
+    <div class="rounded-btn exit-btn"
+         (click)="onLogout()"
+         matTooltip="Logout"
+         matTooltipPosition="right">
+      <i class="material-icons">power_settings_new</i>
+    </div>
+  </div>
+  <!-- END NAV ACTIONS BOTTOM -->
+</div>
+<!-- END GLOBAL NAVIGATION -->
+<!-- BEGIN PROJECT LIST DRAWER -->
+<mat-drawer-container class="projects-nav" autosize>
+  <mat-drawer class="nav-inner" #drawer mode="side">
+    <ul class="projects-list">
+      <!-- BEGIN HELP TEXT -->
+      <div *ngIf="projects.length === 0" class="help-text">
+        <p>You have no project yet.</p>
+      </div>
+      <!-- END HELP TEXT -->
+      <!-- BEGIN PROJECTS DISPLAY -->
+      <li *ngFor="let project of projects">
+        <app-project-item [project]="project"></app-project-item>
+      </li>
+      <!-- END PROJECTS DISPLAY -->
+      <!-- BEGIN NEW PROJECT -->
+      <div *ngIf="newProject" class="new-project">
+        <li>
+          <input type="text" name="project-name" id="newProjectInput" [(ngModel)]="projectTitle" autofocus>
+        </li>
+        <div [ngClass]="['submit', projectTitle === '' ? 'disabled' : '']" (click)="onAddProject()">
+          <i class="material-icons">check</i>
+        </div>
+      </div>
+      <!-- END NEW PROJECT -->
+    </ul>
+  </mat-drawer>
+</mat-drawer-container>
+<!-- END PROJECT LIST DRAWER -->
+<!-- END SIDE NAV COMPONENT -->

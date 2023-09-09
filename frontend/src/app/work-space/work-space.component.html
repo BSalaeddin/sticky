@@ -1,0 +1,15 @@
+<!-- BEGIN WORK SPACE COMPONENT -->
+<!-- BEGIN NAVIGATION -->
+<div class="navigation">
+  <app-side-nav></app-side-nav>
+</div>
+<!-- END NAVIGATION -->
+<!-- BEGIN PROJECT CONTENT -->
+<div class="content">
+  <router-outlet (activate)='onActivate($event)' ></router-outlet>
+  <p class="select-project-help" *ngIf="!selectedProject">Select a project to display its content.</p>
+</div>
+<!-- END PROJECT CONTENT -->
+<!-- END WORK SPACE COMPONENT -->
+
+

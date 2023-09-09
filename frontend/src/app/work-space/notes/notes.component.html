@@ -1,0 +1,38 @@
+<!-- BEGIN NOTES COMPONENT -->
+<!-- BEGIN ADD NOTE BUTTON -->
+<div
+  class="rounder-btn add-note"
+  (click)="onAddNote()"
+  matTooltip="Add new note"
+  matTooltipPosition="below">
+  <i class="material-icons">add_box</i>
+</div>
+<!-- END ADD NOTE BUTTON -->
+<!-- BEGIN SAVE PROJECT BUTTON -->
+<div
+  [ngClass]="['save-note', 'rounder-btn', !projectChanged ? 'disabled' : '', projectChangingAnimation ? 'pulsate' : '']"
+  (click)="onSaveNotesChanges()"
+  matTooltip="Save project changes"
+  matTooltipPosition="below">
+  <i class="material-icons">save</i>
+</div>
+<!-- END SAVE PROJECT BUTTON -->
+<!-- BEGIN SHOW CLOSED NOTES BUTTON -->
+<div
+  [ngClass]="['show-invisible-notes', 'rounder-btn', invisibleNotesCount == 0 ? 'disabled' : '']"
+  (click)="onShowInvisibleNotes()"
+  matTooltip="Show closed notes"
+  matTooltipPosition="above">
+  <i *ngIf="invisibleNotesCount == 0" class="material-icons">visibility_off</i>
+  <i *ngIf="invisibleNotesCount > 0" class="material-icons">visibility</i>
+</div>
+<!-- END SHOW CLOSED NOTES BUTTON -->
+<!-- BEGIN HELP TEXT -->
+<div *ngIf="notes.length === 0" class="help-text">
+  <p>This project have no notes yet.</p>
+</div>
+<!-- END HELP TEXT -->
+<!-- BEGIN NOTES DISPLAY -->
+<app-note-item *ngFor=" let note of notes" [note]="note"></app-note-item>
+<!-- END NOTES DISPLAY -->
+<!-- END NOTES COMPONENT -->

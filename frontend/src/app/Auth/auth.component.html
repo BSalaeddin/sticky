@@ -1,0 +1,96 @@
+<!-- BEGIN AUTH COMPONENT -->
+<div class="welcome-body">
+  <div class="welcome-container">
+    <!-- BEGIN LOGO -->
+    <img src="/assets/img/logo-text.png" alt="sticky">
+    <!-- END LOGO -->
+    <h4 class="description">Create awesome notes.</h4>
+    <!-- BEGIN FORM -->
+    <div class="form">
+      <!-- BEGIN TAB LINKS -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Signup</a>
+        </li>
+      </ul>
+      <!-- END TAB LINKS -->
+      <!-- BEGIN TAB CONTENT -->
+      <div class="tab-content">
+        <!-- BEGIN LOGIN -->
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+            <div class="input-icon">
+              <input name="email" type="email" ngModel required email placeholder="E-mail" #emailInputLogin="ngModel">
+              <i class="material-icons">person_outline</i>
+              <!-- BEGIN EMAIL ERROR -->
+              <div class="input-error" *ngIf="emailInputLogin.invalid && (emailInputLogin.dirty || emailInputLogin.touched)"><span>Please enter a valid email.</span></div>
+              <!-- END EMAIL ERROR -->
+            </div>
+            <div class="input-icon">
+              <input type="password" name="password" ngModel required minlength="6" #passwordInputLogin="ngModel"
+                placeholder="Password">
+              <i class="material-icons">lock_outline</i>
+              <!-- BEGIN PASSWORD ERROR -->
+              <div class="input-error"
+                *ngIf="passwordInputLogin.invalid && (passwordInputLogin.dirty || passwordInputLogin.touched)">
+                <span *ngIf="passwordInputLogin.errors.minlength">Password must be at least 6 characters long.</span>
+                <span *ngIf="passwordInputLogin.errors.required">Password Name is required.</span>
+              </div>
+              <!-- END PASSWORD ERROR -->
+            </div>
+            <button [disabled]="loginForm.invalid" class="button" type="submit">Login</button>
+          </form>
+        </div>
+        <!-- END LOGIN -->
+        <!-- BEGIN SIGNUP -->
+        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+          <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+            <div class="input-icon">
+              <input name="email" type="email" ngModel required email placeholder="E-mail" #emailInput="ngModel">
+              <i class="material-icons">person_outline</i>
+              <!-- BEGIN EMAIL ERROR -->
+              <div class="input-error" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+                <span>Please enter a valid email.</span>
+              </div>
+              <!-- BEGIN EMAIL ERROR -->
+            </div>
+            <div class="input-icon">
+              <input type="password" name="password" ngModel required minlength="6" #passwordInputSignup="ngModel"
+                placeholder="Password">
+              <i class="material-icons">lock_outline</i>
+              <!-- BEGIN PASSWORD ERROR -->
+              <div class="input-error"
+                *ngIf="passwordInputSignup.invalid && (passwordInputSignup.dirty || passwordInputSignup.touched)">
+                <span *ngIf="passwordInputSignup.errors.minlength">Password must be at least 6 characters long.</span>
+                <span *ngIf="passwordInputSignup.errors.required">Password Name is required.</span>
+              </div>
+              <!-- END PASSWORD ERROR -->
+            </div>
+            <div class="input-icon">
+              <input type="password" name="confirm-password" ngModel required minlength="6"
+                #confirmPasswordInput="ngModel" placeholder="Confirm Password">
+              <i class="material-icons">lock_outline</i>
+              <!-- BEGIN PASSWORD MATCH ERROR -->
+              <div class="input-error" *ngIf="confirmPasswordInput.value !== passwordInputSignup.value">
+                <span>Passwords do not match.</span>
+              </div>
+              <!-- END PASSWORD MATCH ERROR -->
+            </div>
+            <button [disabled]="signupForm.invalid || ( confirmPasswordInput.value !== passwordInputSignup.value )"
+              class="button" type="submit">Signup</button>
+            <div *ngIf="userCreated" class="alert alert-success mt-3" role="alert">
+              User Created Successfully!
+            </div>
+          </form>
+        </div>
+        <!-- END SIGNUP -->
+      </div>
+      <!-- END TAB CONTENT -->
+    </div>
+    <!-- END FORM -->
+  </div>
+</div>
+<!-- ENG AUTH COMPONENT -->

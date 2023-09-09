@@ -1,0 +1,135 @@
+/* === Auth body === */
+.welcome-body {
+  background: rgba(195,10,43,1);
+  background: -moz-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(195,10,43,1)), color-stop(100%, rgba(235,16,98,1)));
+  background: -webkit-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: -o-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: -ms-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: linear-gradient(to right, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c30a2b', endColorstr='#eb1062', GradientType=1 );  position: relative;
+  height: 100%;
+  position: relative;
+}
+.description {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+.welcome-container img {
+  width: 180px;
+  margin: auto;
+  display: block;
+}
+.welcome-container {
+  margin: auto;
+  width: 350px;
+  margin-bottom: auto;
+  padding-top: 4em;
+}
+.welcome-container p {
+  font-size: 14px;
+  color: white;
+  margin: 15px 20px;
+}
+p {
+  text-align: center;
+  line-height: 20px;
+}
+/* === Auth body === */
+/* === Form === */
+.welcome-body .form {
+  background-color: white;
+  padding: 3em 2em;
+  border-radius: 0.5rem;
+  margin-top: 2em;
+  box-shadow: 0px 3px 12px 0px #00000030;
+}
+/* === Form === */
+.form .nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  color: #b0b0b0;
+}
+.form .nav-tabs .nav-link {
+  border: 0;
+}
+.form .nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+.form .nav-tabs .nav-item.show .nav-link,  .form .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border-bottom: 2px solid #e7105d;
+}
+.form .nav-tabs {
+  border-bottom: 0;
+  margin-bottom: 2em;
+}
+.input-icon input {width: 100%;padding: 0.5em 1em 0.5em 3em;border: 1px solid lightgrey;border-radius: 2em;/* outline: none; */}
+:focus {
+  outline: none;
+}
+.input-icon i {
+  position: absolute;
+    top: 0;
+    pointer-events: none;
+    left: 0;
+    padding: 11px 14px;
+    font-size: 20px;
+    color: #8d8d8d;
+    cursor: default;
+}
+.input-icon {
+  position: relative;
+  margin: 20px 0;
+  display: block;
+}
+.input-icon input:focus {
+  border: 1px solid #7dddfa;
+}
+.input-icon input::placeholder {
+  color: #b3b3b3;
+}
+.ng-touched .ng-invalid {
+  border: 1px solid #ff9494;
+}
+.ng-touched .ng-valid {
+  border: 1px solid #5fdfbc;
+}
+.input-error {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #ff7b7b;
+}
+.button {
+  width: 100%;
+  border-radius: 50px;
+  padding: 0.5em;
+  border: 0;
+  color: white;
+  background: rgba(195,10,43,1);
+  background: -moz-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(195,10,43,1)), color-stop(100%, rgba(235,16,98,1)));
+  background: -webkit-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: -o-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: -ms-linear-gradient(left, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  background: linear-gradient(to right, rgba(195,10,43,1) 0%, rgba(235,16,98,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c30a2b', endColorstr='#eb1062', GradientType=1 );  position: relative;
+}
+.button:not([disabled]):hover {
+ background: #f9274e;
+}
+.button:disabled {
+  opacity: 0.7;
+}
+/* === Form === */
+
+
+
+
+
+
+
+
+

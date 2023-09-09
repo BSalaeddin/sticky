@@ -1,0 +1,30 @@
+/* === Project item === */
+.delete-project {
+  position: relative;
+  color: #ffa0a0;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 5px;
+  margin-top: 10px;
+  display: none;
+  background-color: #d70d47;
+}
+.project-item .date {
+  font-size: 11px;
+  color: #b7b7b7;
+  margin-bottom: 6px;
+  display: block;
+}
+.selected {
+  border: 1.3px solid #ff719a;
+  border-radius: 3px;
+  background-color: #f7fbff;
+}
+.project-item { padding: 10px; outline: 0; }
+.project-item p { color: #172B4D; margin-bottom: 5px; font-size: 15px; overflow-wrap: break-word; }
+.delete-project i { font-size: 23px; }
+.project-item:hover .delete-project { display: block; }
+.notes-count .count { margin-right: 5px; color: #d10c3e; }
+.delete-project:hover { color: #ff7190; }
+.notes-count { font-size: 13px; color: #8E8E8E; }
+/* === Project item === */

@@ -1,0 +1,74 @@
+<!-- BEGIN NOTE ITEM COMPONENT -->
+<div
+    [ngClass]="['note-item', note.color , inFront ? 'in-front' : '']"
+    [ngStyle]="{'display': note.visible ? 'block' : 'none'}"
+    cdkDrag
+    cdkDragBoundary=".content"
+    [cdkDragFreeDragPosition]="note.position"
+    (cdkDragStarted)="inFront = true;"
+    (cdkDragEnded)="onChangeNotePosition($event)"
+    (click)="inFront = true;"
+    (clickOutside)="inFront = false;"
+    >
+    <!-- BEGIN NOTE SETTINGS MENU -->
+    <div class="note-settings-menu" [@openCloseNoteSettings]=" noteSettingsIsOpen ? 'open' : 'closed' ">
+        <!-- BEGIN NOTE ACTIONS -->
+        <ul *ngIf="noteActionsIsOpen" class="note-actions">
+            <li>
+                <div class="rnd-btn" (click)="onDeleteNote()"><i class="material-icons">delete</i></div>
+            </li>
+            <li>
+                <div class="rnd-btn" (click)="onOpenColors()"><i class="material-icons">color_lens</i></div>
+            </li>
+        </ul>
+        <!-- END NOTE ACTIONS -->
+        <!-- BEGIN NOTE COLORS SELECTION -->
+        <ul *ngIf="noteColorsIsOpen" class="note-colors">
+            <li>
+                <div class=" rnd-btn select-color-1" (click)="onChangeColor('note-color-1')"></div>
+            </li>
+            <li>
+                <div class=" rnd-btn select-color-2" (click)="onChangeColor('note-color-2')"></div>
+            </li>
+            <li>
+                <div class=" rnd-btn select-color-3" (click)="onChangeColor('note-color-3')"></div>
+            </li>
+            <li>
+                <div class=" rnd-btn select-color-4" (click)="onChangeColor('note-color-4')"></div>
+            </li>
+        </ul>
+        <!-- END NOTE COLORS SELECTION -->
+    </div>
+    <!-- END NOTE SETTINGS MENU -->
+    <!-- BEGIN NOTE HEADER -->
+    <div class="note-header" cdkDragHandle>
+        <div class="header-actions">
+            <!-- BEGIN TOGGLE NOTE SETTINGS ACTION-->
+            <div [ngClass]="['rnd-btn', 'icon' , 'note-settings', noteSettingsIsOpen ? 'open' : '']"
+                 (click)="toggleNoteSettingsMenu()"
+                 matTooltip="Note settings"
+                 matTooltipPosition="left">
+                <i class="material-icons">settings</i>
+            </div>
+            <!-- END TOGGLE NOTE SETTINGS ACTION-->
+            <!-- BEGIN CLOSE NOTE ACTION-->
+            <div class=" rnd-btn icon note-close"
+                 (click)="onCloseNote()"
+                 matTooltip="Close note"
+                 matTooltipPosition="right">
+                <i class="material-icons">close</i>
+            </div>
+            <!-- END CLOSE NOTE ACTION-->
+        </div>
+    </div>
+    <!-- END NOTE HEADER -->
+    <!-- BEGIN NOTE CONTENT -->
+    <div class="note-content" #editTest>
+        <textarea
+             (focus)="getCurrentNoteContent(content.value)"
+             (keyup)="onChangeNoteContent(content.value)"
+             spellcheck="false" #content>{{note.content}}</textarea>
+    </div>
+    <!-- END NOTE CONTENT -->
+</div>
+<!-- BEGIN NOTE ITEM COMPONENT -->

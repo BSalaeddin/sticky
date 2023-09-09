@@ -1,0 +1,12 @@
+<!-- BEGIN PROJECT ITEM COMPONENT -->
+<div class="project-item" routerLinkActive="selected" [routerLink]="['/projects', project._id]">
+  <p>{{ project.title }}</p>
+  <span class="date">{{project.createdAt |  date}}</span>
+  <div class="notes-count">
+      <span class="count">{{project.notes.length}}</span><span>notes</span>
+  </div>
+  <div class="delete-project"  (click)="openDialog($event)">
+    <i class="material-icons">delete_outline</i>
+  </div>
+</div>
+<!-- END PROJECT ITEM COMPONENT -->

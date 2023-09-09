@@ -1,0 +1,32 @@
+/* === Navigation === */
+.navigation {
+  float: left;
+  display: inline-block;
+  height: 100%;
+}
+/* === Navigation === */
+/* === Project content === */
+.content {
+  display: block;
+  position: relative;
+  overflow-x: auto;
+  background: url("../../assets/img/bg.jpg");
+  height: 100%;
+  background-size: cover;
+  overflow-y: hidden;
+}
+/* === Project content === */
+/* === Help text === */
+.select-project-help {
+  background-color: white;
+  padding: 30px;
+  color: #b9b9b9;
+  text-align: center;
+  top: 50%;
+  position: relative;
+}
+/* === Help text === */
+
+
+
+

@@ -1,0 +1,94 @@
+/* === Global navigation === */
+.global-nav {
+  float: left;
+  background: rgb(195,10,43);
+  background: -moz-linear-gradient(0deg, rgba(195,10,43,1) 0%, rgba(236,16,99,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(195,10,43,1) 0%, rgba(236,16,99,1) 100%);
+  background: linear-gradient(0deg, rgba(195,10,43,1) 0%, rgba(236,16,99,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c30a2b",endColorstr="#ec1063",GradientType=1);  padding: 10px 5px;;
+  height: 100%;
+}
+.global-nav .logo img {
+  height: 55px;
+  margin: auto;
+  display: block;
+}
+.rounded-btn {
+  padding: 8px;
+  background-color: #f42d66;
+  border-radius: 50%;
+  height: 42px;
+  text-align: center;
+  width: 42px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+.nav-actions-bottom {
+  bottom: 10px;
+  position: absolute;
+  margin-left: 7px;
+}
+.global-nav .logo { margin-bottom: 25px; }
+.nav-actions-top li { margin-bottom: 10px; }
+.rounded-btn:hover { background-color: #d42154; }
+.rounded-btn i { color: white; }
+.exit-btn { background-color: #ff1a44; }
+.exit-btn:hover { background-color: #ad0427; }
+
+/* === Global navigation === */
+/* === Projects drawer === */
+.projects-nav {
+  float: right;
+  background-color: #f3f3f3;
+  height: 100%;
+  box-shadow: inset -1px 0px 3px #79797938;
+}
+.projects-list li {
+  margin-bottom: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.13);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms all;
+    border: 1px solid #f4f4f4;
+}
+.help-text {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  color: #c1c1c1;
+}
+.new-project .submit {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  color: #ff1a44;
+  cursor: pointer;
+  margin: auto;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 5px 0px #7171712b;
+  background-color: white;
+}
+.new-project .submit.disabled {
+  color: #ffffff;
+  cursor: default;
+  background-color: rgb(205, 205, 205);
+}
+.new-project input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #cccccc;
+}
+
+.projects-list li:hover { border-color: #ffbccd; }
+.projects-nav .mat-drawer { background-color: #ededed; }
+.new-project .submit:hover { background-color: #ff1a44; color: white; }
+.new-project .submit.disabled:hover {}
+.new-project li { padding: 10px; }
+.mat-drawer { min-width: 300px; overflow: hidden; width: 100%; }
+/*.mat-drawer ul { height: 100%;  }*/
+
+/* === Projects drawer === */
